@@ -1,0 +1,22 @@
+
+import pandas as pd
+
+def fetch_sample_data():
+    data = [
+        ["2025-07-01", "EC2", 3.5],
+        ["2025-07-01", "Lambda", 0.1],
+        ["2025-07-01", "RDS", 1.2],
+        ["2025-07-02", "EC2", 3.0],
+        ["2025-07-02", "Lambda", 0.15],
+        ["2025-07-02", "RDS", 1.3],
+        ["2025-07-03", "EC2", 8.0],   
+        ["2025-07-03", "Lambda", 0.12],
+        ["2025-07-03", "RDS", 1.1],
+        ["2025-07-04", "EC2", 2.9],
+        ["2025-07-04", "Lambda", 0.1],
+        ["2025-07-04", "RDS", 1.0],
+    ]
+    df = pd.DataFrame(data, columns=["Date", "Service", "Cost"])
+    df.to_csv("data/sample_usage.csv", index=False)
+    return df
+
